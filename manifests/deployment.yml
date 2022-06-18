@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: hanspalnpluto 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hanspalnpluto
+  template:
+    metadata:
+      labels:
+        app: hanspalnpluto 
+    spec:
+      containers:
+        - name: hanspalnpluto 
+          image: yyztstacr.azurecr.io/hanspalnpluto
+          ports:
+          - containerPort: 8080
